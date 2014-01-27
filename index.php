@@ -23,13 +23,19 @@
 	}
 	function doWithResp(resp) {
 		//Csináljamit akarsz a végeredménnyel, a resp az egy JSON objektum. Konzolba logoltam alapból, F12-vel meg tudod nézni
+		var szoveg="";
 		console.log('Ennyi:');
 		console.log(resp);
+		for(i=1;i<resp.length;i++){
+			szoveg=szoveg+resp[i]+'\n';
+		}
+		$("#aroma").val(szoveg);
 	}
 </script>
 </head>
 
 <body>
-	<button onclick="auth();">Authorize</button>
+	<button onclick="auth();">Csapasd neki!</button>
+	<textarea id="aroma"></textarea>
 </body>
 </html>
